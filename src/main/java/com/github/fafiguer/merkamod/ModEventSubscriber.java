@@ -1,6 +1,7 @@
 package com.github.fafiguer.merkamod;
 
 
+import com.github.fafiguer.init.ModItemGroup;
 import net.minecraft.item.Item;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.event.RegistryEvent;
@@ -13,7 +14,7 @@ public class ModEventSubscriber{
     @SubscribeEvent
     public static void onRegisterItems(RegistryEvent.Register<Item> event) {
         event.getRegistry().registerAll(
-                setup(new Item(new Item.Properties()), "example_item")
+                setup(new Item(new Item.Properties().group(ModItemGroup.MOD_ITEM_GROUP)), "example_item")
         );
     }
 
