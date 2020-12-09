@@ -1,7 +1,3 @@
-Build: 1.16.4-35.1.0 - Fri Nov 20 20:54:30 GMT 2020
-	lex:
-		Bump version for RB.
-
 Build: 1.16.3-34.1.0 - Thu Sep 24 07:05:13 GMT 2020
 	lex:
 		Prep new RB.

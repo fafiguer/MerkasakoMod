@@ -1,11 +1,10 @@
-
 modLoader="javafml" #mandatory
 
-loaderVersion="[35,)"
+loaderVersion="[34,)"
 
 license="All rights reserved"
 
-issueTrackerURL="http://my.issue.tracker/" #optional
+issueTrackerURL="https://github.com/fafiguer/MerkasakoMod/issues" #optional
 
 [[mods]]
 
@@ -35,15 +34,15 @@ Una recreacion del MerkaSako de Wakfu
 
     mandatory=true #mandatory
 
-    versionRange="[35,)" #mandatory
+    versionRange="[34,)" #mandatory
 
     ordering="NONE"
 
     side="BOTH"
 
-[[dependencies.examplemod]]
+[[dependencies.merkasakomod]]
     modId="minecraft"
     mandatory=true
-    versionRange="[1.16.1,1.17)"
+    versionRange="[1.16.3,1.17)"
     ordering="NONE"
     side="BOTH"
