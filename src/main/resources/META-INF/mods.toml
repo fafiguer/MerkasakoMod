@@ -5,19 +5,19 @@ loaderVersion="[35,)"
 
 license="All rights reserved"
 
-issueTrac//my.issue.tracker/" #optional
+issueTrackerURL="http://my.issue.tracker/" #optional
 
 [[mods]]
 
 modId="merkasako"
 
-version="1.16.4-1.0.0" #mandatory
+version="${file.jarVersion}" #mandatory
 
 displayName="MerkaSako Mod" #mandatory
 
 updateJSONURL="http://myurl.me/" #optional
 
-displayURL="http://example.com/" #optional
+displayURL="https://github.com/fafiguer/MerkasakoMod" #optional
 
 logoFile="examplemod.png" #optional
 
@@ -29,7 +29,7 @@ description='''
 Una recreacion del MerkaSako de Wakfu
 '''
 
-[[dependencies.examplemod]] #optional
+[[dependencies.merkasakomod]] #optional
 
     modId="forge" #mandatory
 
@@ -44,6 +44,6 @@ Una recreacion del MerkaSako de Wakfu
 [[dependencies.examplemod]]
     modId="minecraft"
     mandatory=true
-    versionRange="[1.16.4,1.17)"
+    versionRange="[1.16.1,1.17)"
     ordering="NONE"
     side="BOTH"
