@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "merkasako:items/merka_gema"
+    "layer0": "merkasako:items/merkagema"
   }
 }

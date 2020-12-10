@@ -3,6 +3,7 @@ package com.FafaTeam.MerkaSako.util;
 import com.FafaTeam.MerkaSako.MerkaSakoMod;
 import com.FafaTeam.MerkaSako.items.ItemBase;
 import net.minecraft.item.Item;
+//import net.minecraft.item.ItemGroup;
 import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.registries.DeferredRegister;
@@ -15,8 +16,8 @@ public class RegistryHandler {
         ITEMS.register(FMLJavaModLoadingContext.get().getModEventBus());
     }
 
-    //Items
-    public static final RegistryObject<Item> MERKASAKO = ITEMS.register("merkasako", ItemBase::new);
-    public static final RegistryObject<Item> MERKA_GEMA = ITEMS.register("merka_gema", ItemBase::new);
-    public static final RegistryObject<Item> FRAGMENTO_DE_MERKA_GEMA = ITEMS.register("fragmento_de_merka_gema", ItemBase::new);
+    //Items ("merkasako", () -> new Item(new Item.Properties().group(ItemGroup.instance).maxStackSize(1)));
+    public static final RegistryObject<Item> MERKASAKO = ITEMS.register("merkasako", () -> new Item(new Item.Properties().group(MerkaSakoMod.TAB).maxStackSize(1)));
+    public static final RegistryObject<Item> MERKAGEMA = ITEMS.register("merkagema", ItemBase::new);
+    public static final RegistryObject<Item> FRAGMENTO_DE_MERKAGEMA = ITEMS.register("fragmento_de_merkagema", ItemBase::new);
 }
