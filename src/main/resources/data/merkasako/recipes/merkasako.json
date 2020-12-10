@@ -1,0 +1,29 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern":
+  [
+    "lsl",
+    "ldl",
+    "lll"
+  ],
+  "key":
+  {
+    "l":
+    {
+      "item": "minecraft:leather"
+    },
+    "d":
+    {
+      "item": "minecraft:diamond"
+    },
+    "s":
+    {
+      "item": "minecraft:string"
+    }
+  },
+  "result":
+  {
+    "item": "merkasako:merkasako",
+    "count": 1
+  }
+}

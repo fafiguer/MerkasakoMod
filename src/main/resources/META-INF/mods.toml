@@ -10,7 +10,7 @@ issueTrackerURL="https://github.com/fafiguer/MerkasakoMod/issues" #optional
 
 modId="merkasako"
 
-version="${file.jarVersion}" #mandatory
+version="1.16.4-1.0.0" #mandatory
 
 displayName="MerkaSako Mod" #mandatory
 
