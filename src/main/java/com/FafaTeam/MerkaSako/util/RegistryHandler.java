@@ -17,4 +17,6 @@ public class RegistryHandler {
 
     //Items
     public static final RegistryObject<Item> MERKASAKO = ITEMS.register("merkasako", ItemBase::new);
+    public static final RegistryObject<Item> MERKA_GEMA = ITEMS.register("merka_gema", ItemBase::new);
+    public static final RegistryObject<Item> FRAGMENTO_DE_MERKA_GEMA = ITEMS.register("fragmento_de_merka_gema", ItemBase::new);
 }
