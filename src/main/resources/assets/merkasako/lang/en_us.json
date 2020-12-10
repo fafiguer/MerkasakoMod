@@ -1,6 +1,6 @@
 {
   "item.merkasako.merkasako" : "Merkasako",
-  "ItemGroup.MerkasakoTAB" : "Merkasako Mod",
+  "itemGroup.MerkasakoTAB" : "Merkasako Mod",
   "item.merkasako.merkagema" : "Merkagema",
   "item.merkasako.fragmento_de_merkagema" : "Fragmento de Merkagema"
 }
