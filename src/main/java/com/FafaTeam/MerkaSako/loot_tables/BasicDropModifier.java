@@ -1,15 +1,11 @@
 package com.FafaTeam.MerkaSako.loot_tables;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import javax.annotation.Nonnull;
 
-import com.google.gson.JsonArray;
-import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 
-import net.minecraft.entity.EntityType;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.loot.LootContext;
@@ -22,11 +18,11 @@ import net.minecraftforge.registries.ForgeRegistries;
 
 public class BasicDropModifier extends LootModifier{
     private final Item itemReward;
-    private final List<EntityType<?>> mobList;
-    public BasicDropModifier(ILootCondition[] conditionsIn, Item reward, List<EntityType<?>> mobs){
+    //private final List<EntityType<?>> mobList;
+    public BasicDropModifier(ILootCondition[] conditionsIn, Item reward/*, List<EntityType<?>> mobs*/){
         super(conditionsIn);
         itemReward = reward;
-        mobList = mobs;
+        //mobList = mobs;
     }
 
     @Nonnull
@@ -45,13 +41,13 @@ public class BasicDropModifier extends LootModifier{
             //Item wheat = ForgeRegistries.ITEMS.getValue(new ResourceLocation(JSONUtils.getString(object, "replacement")));
             Item reward = ForgeRegistries.ITEMS.getValue(new ResourceLocation(JSONUtils.getString(object, "reward")));
 
-            List<EntityType<?>> mobs = new ArrayList<>();
+            /*List<EntityType<?>> mobs = new ArrayList<>();
             JsonArray mobs_array = JSONUtils.getJsonArray(object, "mobs");
             for(JsonElement jsonElement: mobs_array){
                 EntityType<?> mob = ForgeRegistries.ENTITIES.getValue(new ResourceLocation(jsonElement.getAsString()));
                 mobs.add(mob);
-            }
-            return new BasicDropModifier(conditionsIn, reward, mobs);
+            }*/
+            return new BasicDropModifier(conditionsIn, reward/*, mobs*/);
         }
 
         @Override
@@ -63,11 +59,11 @@ public class BasicDropModifier extends LootModifier{
             json.addProperty("reward", ForgeRegistries.ITEMS.getKey(instance.itemReward).toString());
             //json.addProperty("mobs", JSONUtils.toJson());
 
-            JsonArray mobs_array = new JsonArray();
+            /*JsonArray mobs_array = new JsonArray();
             for(EntityType<?> mob: instance.mobList){
                 mobs_array.add(ForgeRegistries.ENTITIES.getKey(mob).toString());
             }
-            json.addProperty("mobs", mobs_array.getAsString());
+            json.addProperty("mobs", mobs_array.getAsString());*/
 
             return json;
         }

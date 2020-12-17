@@ -1,9 +1,6 @@
 {
   "type": "merkasako:basic_drop",
   "reward": "merkasako:fragmento_de_merkagema",
-  "mobs": [
-    "minecraft:zombie"
-  ],
   "conditions": [
     {
       "condition": "minecraft:killed_by_player"
@@ -12,6 +9,18 @@
       "condition": "minecraft:random_chance_with_looting",
       "chance": 0.9,
       "looting_multiplier": 0.01
+    },
+    {
+      "condition": "merkasako:killed_entities_condition",
+      "entity": "this",
+      "mobs_predicate": [
+        {
+          "type": "minecraft:zombie"
+        },
+        {
+          "type": "minecraft:skeleton"
+        }
+      ]
     }
   ]
 }

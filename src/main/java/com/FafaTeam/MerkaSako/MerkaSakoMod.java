@@ -1,5 +1,6 @@
 package com.FafaTeam.MerkaSako;
 
+import com.FafaTeam.MerkaSako.loot_conditions.LootConditions;
 import com.FafaTeam.MerkaSako.loot_tables.LootTables;
 import com.FafaTeam.MerkaSako.util.RegistryHandler;
 
@@ -28,6 +29,7 @@ public class MerkaSakoMod{
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::doClientStuff);
 
         LootTables.GLOBAL_LOOT_MODIFIER.register(FMLJavaModLoadingContext.get().getModEventBus());
+        LOGGER.info("\n\n" + LootConditions.KILLED_ENTITIES_CONDITION.toString() + "\n\n");
         RegistryHandler.init();
 
         MinecraftForge.EVENT_BUS.register(this);
