@@ -5,7 +5,6 @@ import java.util.List;
 
 import javax.annotation.Nonnull;
 
-import com.FafaTeam.MerkaSako.MerkaSakoMod;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
@@ -33,7 +32,6 @@ public class BasicDropModifier extends LootModifier{
     @Nonnull
     @Override
     public List<ItemStack> doApply(List<ItemStack> generatedLoot, LootContext context){
-        MerkaSakoMod.LOGGER.info("\n\n\t\t doApply()\n\n");
         generatedLoot.add(new ItemStack(itemReward, 1));
         return generatedLoot;
     }
