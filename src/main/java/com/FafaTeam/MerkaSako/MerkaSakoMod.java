@@ -1,28 +1,16 @@
 package com.FafaTeam.MerkaSako;
 
 import com.FafaTeam.MerkaSako.loot_tables.BasicDropModifier;
-import com.FafaTeam.MerkaSako.loot_tables.WheatSeedsConverterModifier;
 import com.FafaTeam.MerkaSako.util.RegistryHandler;
 
-import net.minecraft.advancements.criterion.ItemPredicate;
-import net.minecraft.block.Blocks;
-import net.minecraft.data.DataGenerator;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
-import net.minecraft.item.Items;
-import net.minecraft.loot.conditions.BlockStateProperty;
-import net.minecraft.loot.conditions.ILootCondition;
-import net.minecraft.loot.conditions.MatchTool;
 import net.minecraftforge.common.MinecraftForge;
-import net.minecraftforge.common.data.GlobalLootModifierProvider;
 import net.minecraftforge.common.loot.GlobalLootModifierSerializer;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.fml.common.Mod.EventBusSubscriber;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
-import net.minecraftforge.fml.event.lifecycle.GatherDataEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -63,42 +51,6 @@ public class MerkaSakoMod{
     };
 
 
-
-
-    private static final RegistryObject<WheatSeedsConverterModifier.Serializer> WHEATSEEDS = GLOBAL_LOOT_MODIFIER.register("wheat_harvest", WheatSeedsConverterModifier.Serializer::new);
     public static final RegistryObject<BasicDropModifier.Serializer> BASIC_DROP = GLOBAL_LOOT_MODIFIER.register("basic_drop", BasicDropModifier.Serializer::new);
 
-
-    @EventBusSubscriber(modid = MOD_ID, bus = EventBusSubscriber.Bus.MOD)
-    public static class EventHandlers {
-        @SubscribeEvent
-        public static void runData(GatherDataEvent event)
-        {
-            //LOGGER.info("\n\n\trunData()\n\n");
-            event.getGenerator().addProvider(new DataProvider(event.getGenerator(), MOD_ID));
-        }
-    }
-
-
-
-    private static class DataProvider extends GlobalLootModifierProvider
-    {
-        public DataProvider(DataGenerator gen, String modid)
-        {
-            super(gen, modid);
-        }
-
-        @Override
-        protected void start()
-        {
-            add("wheat_harvest", WHEATSEEDS.get(), new WheatSeedsConverterModifier(
-                    new ILootCondition[] {
-                            MatchTool.builder(ItemPredicate.Builder.create().item(Items.SHEARS)).build(),
-                            BlockStateProperty.builder(Blocks.WHEAT).build()
-                    },
-                    2, Items.WHEAT_SEEDS, Items.WHEAT)
-            );
-        }
-    }
-    
 }
