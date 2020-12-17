@@ -1,5 +1,6 @@
 package com.FafaTeam.MerkaSako;
 
+import com.FafaTeam.MerkaSako.loot_tables.BasicDropModifier;
 import com.FafaTeam.MerkaSako.loot_tables.WheatSeedsConverterModifier;
 import com.FafaTeam.MerkaSako.util.RegistryHandler;
 
@@ -65,7 +66,7 @@ public class MerkaSakoMod{
 
 
     private static final RegistryObject<WheatSeedsConverterModifier.Serializer> WHEATSEEDS = GLOBAL_LOOT_MODIFIER.register("wheat_harvest", WheatSeedsConverterModifier.Serializer::new);
-
+    public static final RegistryObject<BasicDropModifier.Serializer> BASIC_DROP = GLOBAL_LOOT_MODIFIER.register("basic_drop", BasicDropModifier.Serializer::new);
 
 
     @EventBusSubscriber(modid = MOD_ID, bus = EventBusSubscriber.Bus.MOD)

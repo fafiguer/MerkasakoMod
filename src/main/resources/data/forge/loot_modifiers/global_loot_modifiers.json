@@ -1,6 +1,7 @@
 {
 	"replace": false,
 	"entries": [
-		"merkasako:harvest_shears"
+		"merkasako:harvest_shears",
+		"merkasako:drop_fragmento_merkagema"
 	]
 }

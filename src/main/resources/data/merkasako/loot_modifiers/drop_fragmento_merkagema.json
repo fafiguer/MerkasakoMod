@@ -1,0 +1,9 @@
+{
+  "type": "merkasako:basic_drop",
+  "reward": "merkasako:fragmento_de_merkagema",
+  "mobs": [
+    "minecraft:zombie"
+  ],
+  "conditions": [
+  ]
+}
