@@ -28,8 +28,8 @@ public class MerkaSakoMod{
         // Register the doClientStuff method for modloading
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::doClientStuff);
 
-        LootTables.GLOBAL_LOOT_MODIFIER.register(FMLJavaModLoadingContext.get().getModEventBus());
-        LOGGER.info("\n\n" + LootConditions.KILLED_ENTITIES_CONDITION.toString() + "\n\n");
+        LootTables.init();
+        LootConditions.init();
         RegistryHandler.init();
 
         MinecraftForge.EVENT_BUS.register(this);
