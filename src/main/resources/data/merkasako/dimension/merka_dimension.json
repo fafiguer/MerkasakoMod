@@ -4,8 +4,16 @@
     "type": "minecraft:flat",
     "seed": 0,
     "settings": {
-      "biome": "minecraft:the_void",
+      "biome": "merkasako:merka_biome",
       "layers":[
+        {
+          "block": "minecraft:bedrock",
+          "height": 1
+        },
+        {
+          "block": "minecraft:stone",
+          "height": 2
+        }
       ],
       "structures": {
         "structures": {}
